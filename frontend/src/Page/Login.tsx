@@ -1,6 +1,5 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState} from "react";
 import Api from "src/utils/customApi";
 import { rs } from "src/utils/types";
 import { setAccessToken, setRefreshToken } from "src/Auth/tokenManager";
@@ -34,11 +33,6 @@ function Login() {
     event.preventDefault();
 
     const data = new FormData(event.currentTarget);
-    console.log({
-      event,
-      name: data.get("name"),
-      password: data.get("password"),
-    });
 
     const userLogin = async () => {
       const result = await Api.post(`/users/auth`, {
@@ -46,22 +40,17 @@ function Login() {
         password: data.get("password"),
       }).then((res) => res.data as rs.UserAuth);
       setSaveInfo(result);
-      console.log("받아온 결과1", result);
-      console.log("받아온 결과2", result.refresh_token);
 
       if (result.access_token !== null) {
         setAccessToken(result.access_token,false);
         setRefreshToken(result.refresh_token,false);
         alert("로그인 성공♻️");
 
-        // checkAccessToken();
-        // checkRefreshToken();
         decodeToken(result.access_token);
         window.location.replace("/login/welcome");
       } else {
         alert("아이디와 비밀번호를 다시 확인해주세요.");
         // Handle error.
-        console.log("An error occurred:", result);
       }
     };
     userLogin();

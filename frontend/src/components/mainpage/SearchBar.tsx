@@ -1,10 +1,9 @@
 import { Box, TextField, IconButton, styled } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Api from "../../utils/customApi";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 const ranklist: { kind: string; image: string }[] = [
     {
@@ -65,9 +64,9 @@ const SearchBar = () => {
     const [input, setInput] = useState("");
     let navigate = useNavigate();
 
-    const onSubmit = (input: string) => {
-        axios
-            .post(`http://localhost:8080/api/search/`, { value: input })
+    const onSubmit = async(input: string) => {
+        await
+            Api.post(`/search/`, { value: input })
             .then((response) => {
                 let trashIMG = "";
                 for (let j = 0; j < 6; j++) {

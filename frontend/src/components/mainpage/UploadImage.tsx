@@ -64,9 +64,7 @@ function UploadImage() {
       const img: any = await resizeFile(file);
       setIsImg(img);
       setUrlImg(URL.createObjectURL(img));
-      console.log("success upload image!");
     } catch (err) {
-      console.log(err);
     }
   };
 
@@ -90,7 +88,6 @@ function UploadImage() {
         setChecked(true);
       })
       .catch((error) => {
-        console.log("An error occurred:", error.response);
         navigate(`/errorpage`);
       });
 
@@ -106,7 +103,6 @@ function UploadImage() {
 
             if (res.status === 200) {
               //제대로 들어갔을 때
-              console.log("successsuccesssuccesssuccess");
               navigate(`/howtopage`, {
                 state: {
                   challenge_id: res.data.challenge_id,

@@ -48,7 +48,6 @@ function MyBadge() {
       },
     }).then((res) => res.data as rs.Challenge[]);
     const challengeList = result;
-    console.log(result);
     const temptList: rs.Challenge[] = trashlist.list?.map((trashlist: any) => {
       challengeList?.map((getlist: any) => {
         if (getlist?.challenge_id === trashlist.challenge_id) {
@@ -59,7 +58,6 @@ function MyBadge() {
       return trashlist;
     });
     setMyChallenge(temptList);
-    console.log(temptList);
     return temptList;
   };
 

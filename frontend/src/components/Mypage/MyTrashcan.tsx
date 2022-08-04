@@ -85,7 +85,6 @@ function MyTrashcan(props: Props) {
   }, [page]);
 
   useEffect(() => {
-    console.log(trashes);
   }, [trashes]);
 
   //=============MyTrashCan API================

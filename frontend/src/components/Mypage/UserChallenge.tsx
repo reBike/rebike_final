@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Box, Card, Container, Hidden, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { rs } from "src/utils/types";
 import constants from "../../utils/constants";
 

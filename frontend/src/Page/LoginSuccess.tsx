@@ -1,17 +1,13 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import {
-  Divider,
-  Button,
   CssBaseline,
-  TextField,
   Box,
   Typography,
   Container,
   Link,
-  styled,
 } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { RootReducerType } from "../../src/index";
@@ -36,10 +32,8 @@ function Login() {
 
   useEffect(() => {
     if (token) {
-      console.log("header.js useEffect");
       dispatch(fetchDecodeData(token as string));
     } else {
-      console.log("header.js not token");
     }
   }, []);
   return (

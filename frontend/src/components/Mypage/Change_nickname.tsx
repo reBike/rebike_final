@@ -1,7 +1,5 @@
 import * as React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import axios from "axios";
-import { API_BASE_URL } from "src/utils/constants";
 import { getAccess } from "../../Auth/tokenManager";
 import { setAccessToken, setRefreshToken } from "src/Auth/tokenManager";
 import { useState } from "react";
@@ -76,14 +74,9 @@ function ChangeNickName() {
     const stringAccess: any = getAccess();
 
     if (stringAccess !== null) {
-      // stringAccess if문 안써주면 코드 오류 발생
-      /* const access: rs.TokenInfo = JSON.parse(stringAccess); // string형태로 받는 토큰 JSON으로 만들어줌*/
-      console.log("넘겨줄 토큰값", stringAccess);
 
-      await axios
-        .patch(
-          `${API_BASE_URL}/users/`,
-          { value: { alias: changeAlias } },
+      await Api
+        .patch(`/users/`, { value: { alias: changeAlias } },
           {
             //patch : 바디 -> 변경할 alias & 헤더 -> 확인해야되는 토큰
             headers: {
@@ -92,7 +85,6 @@ function ChangeNickName() {
           }
         )
         .then((response) => {
-          console.log("response", response.data);
           setAccessToken(response.data.access_token, true); // 그 전의 access토큰 초기화
           setRefreshToken(response.data.refresh_token, true); // 그 전의 refresh토큰 초기화
           setOpen(true);
@@ -119,7 +111,6 @@ function ChangeNickName() {
 
   React.useEffect(() => { }, [alias]);
   React.useEffect(() => {
-    console.log("newAccess", newAccess);
   }, [newAccess]);
 
   return (

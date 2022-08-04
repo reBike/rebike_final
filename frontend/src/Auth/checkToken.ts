@@ -1,7 +1,7 @@
 import axios from "axios";
 import { API_BASE_URL } from "src/utils/constants";
 import { rs } from "src/utils/types";
-import { getToken, setAccessToken, setRefreshToken } from "./tokenManager";
+import { getToken, setAccessToken } from "./tokenManager";
 
 // access_token의 만료일을 확인
 const checkAccessToken = () => {
@@ -74,7 +74,6 @@ const getRefreshToken = async () => {
       .catch((e) => {
         localStorage.clear();
         window.alert(e);
-        // window.location.replace("/login");
       });
 
     accessToken = data.access_token;

@@ -15,12 +15,10 @@ interface trashType {
 const HowtoResult = (props: any) => {
   const [resTrash, setResTrash] = useState<trashType | undefined>();
 
-  console.log(props.kind);
-  console.log(props.imgURL);
 
   useEffect(() => {
     if (props.kind === "BIODEGRADABLE") {
-      //props 대신 imgkind
+
       setResTrash(constants.BIODEGRADABLE);
     }
     if (props.kind === "GLASS") {

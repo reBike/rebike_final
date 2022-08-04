@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Button,
   Container,
@@ -75,13 +75,8 @@ function Header() {
     if (token) {
       dispatch(fetchDecodeData(token as string));
     } else {
-      console.log("header.js not token");
     }
   }, []);
-
-  function deleteToken() {
-    localStorage.clear();
-  }
 
   //============Mypage List============
   const navigate = useNavigate();
@@ -207,8 +202,6 @@ function Header() {
               </div>
               <Button>
                 <Link
-                  href="/mainpage"
-                  onClick={deleteToken}
                   sx={{
                     textDecoration: "none",
                     color: "#F7F8E9",

@@ -5,10 +5,9 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import axios from "axios";
-import { API_BASE_URL } from "src/utils/constants";
 import { getAccess } from "../../Auth/tokenManager";
 import { ReduxModule } from "../../modules/ReduxModule";
+import Api from "../../utils/customApi";
 
 const theme = createTheme({
   palette: {
@@ -24,10 +23,10 @@ function formatDate(date: Date) {
     (date.getMonth() + 1).toString().padStart(2, "0"),
     date.getDate().toString().padStart(2, "0"),
   ].join("-");
-} // 날짜 상태
+} 
 
 function Dates({ onClickRetrieve }: { onClickRetrieve: any }) {
-  // 함수의 반환 : onClickRetrieve
+
   const userIdtoRedux = ReduxModule().decodeInfo?.id;
 
   const [StartDate, setStartDate] = React.useState<string | null>(null);
@@ -49,8 +48,6 @@ function Dates({ onClickRetrieve }: { onClickRetrieve: any }) {
 
   const HandleSubmit = (event: any) => {
     event.preventDefault();
-    console.log(StartDate);
-    console.log(EndDate);
     fetchUserData();
   };
 
@@ -67,12 +64,10 @@ function Dates({ onClickRetrieve }: { onClickRetrieve: any }) {
 
     const getDate = async () => {
       const stringAccess: any = getAccess();
-      console.log("잘 온거?", stringAccess);
-      if (stringAccess !== null) { // stringAccess if문 안써주면 코드 오류 발생
-        /* const access: rs.TokenInfo = JSON.parse(stringAccess); // string형태로 받는 토큰 JSON으로 만들어줌*/
-        await axios
+      if (stringAccess !== null) { 
+        await Api
           .get(
-            `${API_BASE_URL}/trash/users/${userIdtoRedux}/statistics${periodStr}${startDateStr}${endDateStr}`, { //patch : 바디 -> 변경할 alias & 헤더 -> 확인해야되는 토큰 
+            `/trash/users/${userIdtoRedux}/statistics${periodStr}${startDateStr}${endDateStr}`, { //patch : 바디 -> 변경할 alias & 헤더 -> 확인해야되는 토큰 
             headers: {
               Authorization: `${stringAccess.value}`
             }
@@ -80,13 +75,10 @@ function Dates({ onClickRetrieve }: { onClickRetrieve: any }) {
           .then((response) => {
             // Handle success.
             const responseUserData = response.data;
-            console.log("data saved!");
-            console.log(response.data);
             onClickRetrieve(responseUserData);
           })
           .catch((error) => {
             // Handle error.
-            console.log("An error occurred:", error.response);
           });
       };
     }

@@ -5,7 +5,6 @@ import UploadImage from "../components/mainpage/UploadImage";
 import PopularTrash from "../components/mainpage/PopularTrash";
 import { useRef, useEffect } from "react";
 import lottie from "lottie-web";
-import StartPage from "./StartPage";
 import StartLogo from "../images/startLogo";
 import Animation from "src/modules/Animation";
 import useMoveScroll from "src/modules/UseMoveScroll";

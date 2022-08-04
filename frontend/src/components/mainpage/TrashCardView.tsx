@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Grid,
@@ -10,8 +10,8 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import axios from "axios";
-import useScrollFadeIn from '../../actions/useScrollFadeIn';
+import useScrollFadeIn from '../../modules/useScrollFadeIn';
+import Api from "../../utils/customApi";
 
 interface BaseContent {
   kind: string;
@@ -82,26 +82,28 @@ function MultiActionAreaCard() {
   const [secondData, setSecondData] = useState<BaseContent | null>(null);
   const [thridData, setThirdData] = useState<BaseContent | null>(null);
 
-  axios
-    .get("http://localhost:8080/API/trash/statistics/ranking")
-    .then((response) => {
-      for (let i = 0; i < 3; i++) {
-        trashlist[i].kind = response.data[i].kind;
-        for (let j = 0; j < 6; j++) {
-          if (ranklist[j].kind === trashlist[i].kind) {
-            trashlist[i].images = ranklist[j].images;
+  const getRanking = async () => {
+    await Api.get(`/trash/statistics/ranking`)
+      .then((response) => {
+        for (let i = 0; i < 3; i++) {
+          trashlist[i].kind = response.data[i].kind;
+          for (let j = 0; j < 6; j++) {
+            if (ranklist[j].kind === trashlist[i].kind) {
+              trashlist[i].images = ranklist[j].images;
+            }
           }
         }
-      }
 
 
-      setFirstData(trashlist[0]);
-      setSecondData(trashlist[1]);
-      setThirdData(trashlist[2]);
-    })
-    .catch((error) => {
-      console.log("error", error.response);
-    });
+        setFirstData(trashlist[0]);
+        setSecondData(trashlist[1]);
+        setThirdData(trashlist[2]);
+      })
+      .catch((error) => {
+      });
+  }
+
+  React.useEffect(()=>{},[getRanking()]);
 
   return (
     <Grid container

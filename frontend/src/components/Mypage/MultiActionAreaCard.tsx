@@ -24,11 +24,8 @@ const MyTrashcanBtn = styled(Button)(({}) => ({
 
 export default function MultiActionAreaCard({ image = "", id = "" }) {
   const navigate = useNavigate();
-
   const dispatch = useDispatch();
-  //const itemID = useSelector((state: RootReducerType) => state.ImgIDReducer);
   const onDispatch = () => {
-    // console.log(id);
     dispatch(save_ID(id));
     navigate(`/howtopage`);
   };
