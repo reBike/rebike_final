@@ -2,6 +2,9 @@ version: "3.8"
 
 volumes:
   elasticsearch_volume:
+  static_volume: null
+  media_volume: null
+  build_folder: null
 
 services:
   backend:
@@ -18,6 +21,19 @@ services:
     depends_on:
       elasticsearch:
         condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        API_URL: "*"
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8000
+    volumes:
+      - ./frontend/:/frontend
+      - build_folder:/frontend/build
+      - ./frontend/node_modules/:/frontend/node_modules
+    tty: true
 
   prometheus:
     image: prom/prometheus
@@ -100,11 +116,14 @@ services:
   nginx:
     build: ./nginx
     ports:
-      - 80:80
+      - 80:8080
     volumes:
-      - ./nginx/nginx:/etc/nginx
+      - static_volume:/backend/staticfiles
+      - media_volume:/backend/mediafiles
+      - build_folder:/var/www/frontend
     depends_on:
       - backend
+      - frontend
 
   kibana:
     container_name: kibana
