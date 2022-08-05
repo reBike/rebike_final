@@ -95,7 +95,7 @@ Default : 지금까지 올렸던 총 사진 종류, 개수
 
 ## 🌿 ERD
 
-<img src="https://user-images.githubusercontent.com/41159837/183132832-e911786b-a2b5-4647-baea-c66199e8ac85.png" width="100%" height="100%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183132832-e911786b-a2b5-4647-baea-c66199e8ac85.png" width="50%" height="50%"/>
 
 ### **users api**
 
@@ -144,42 +144,42 @@ Default : 지금까지 올렸던 총 사진 종류, 개수
     - elastic_search default data setter
         1. make connection with `django_elasticsearch_dsl`
             
-            <img src="https://user-images.githubusercontent.com/41159837/183142917-54026b58-761b-42a9-9063-b68f0042b2f8.png" width="100%" height="100%"/>
+            <img src="https://user-images.githubusercontent.com/41159837/183142917-54026b58-761b-42a9-9063-b68f0042b2f8.png" width="50%" height="50%"/>
             
         2. make default data by using `search_cofig.json` 
             
-            <img src="https://user-images.githubusercontent.com/41159837/183142923-932df86b-f5d8-413c-bc2e-6debd3871d0f.png" width="100%" height="100%"/>
+            <img src="https://user-images.githubusercontent.com/41159837/183142923-932df86b-f5d8-413c-bc2e-6debd3871d0f.png" width="50%" height="50%"/>
             
-            <img src="https://user-images.githubusercontent.com/41159837/183142925-04062de1-2392-46f7-833b-57d7e80177bc.png" width="100%" height="100%"/>
+            <img src="https://user-images.githubusercontent.com/41159837/183142925-04062de1-2392-46f7-833b-57d7e80177bc.png" width="50%" height="50%"/>
             
         3. bulk default data on elastic_search
             
-            <img src="https://user-images.githubusercontent.com/41159837/183142927-8c397975-1d18-471e-abd5-6e52f6567bf7.png" width="100%" height="100%"/>
+            <img src="https://user-images.githubusercontent.com/41159837/183142927-8c397975-1d18-471e-abd5-6e52f6567bf7.png" width="50%" height="50%"/>
             
 - elastic_search on Search api
     - get  search_value from query_param
         
-        <img src="https://user-images.githubusercontent.com/41159837/183143129-e310f3db-c82d-43fa-852b-38f8487959b2.png" width="100%" height="100%"/>
+        <img src="https://user-images.githubusercontent.com/41159837/183143129-e310f3db-c82d-43fa-852b-38f8487959b2.png"width="50%" height="50%"/>
         
     - make connection with elastic_search by using `django_elasticsearch_dsl`
         
-        <img src="https://user-images.githubusercontent.com/41159837/183143135-e499a402-28a3-4b29-a4ab-ae87c2bf8f66.png" width="100%" height="100%"/>
+        <img src="https://user-images.githubusercontent.com/41159837/183143135-e499a402-28a3-4b29-a4ab-ae87c2bf8f66.png" width="50%" height="50%"/>
         
     - get data which contained key that has correlation with search_value
     - example
         1. send request
             
-            <img src="https://user-images.githubusercontent.com/41159837/183143143-d43d270f-3b6b-4735-96fc-22ac08e445cb.png" width="100%" height="100%"/>
+            <img src="https://user-images.githubusercontent.com/41159837/183143143-d43d270f-3b6b-4735-96fc-22ac08e445cb.png" width="50%" height="50%"/>
             
         2. output
             
-            <img src="https://user-images.githubusercontent.com/41159837/183143147-cb648a62-4f0c-4fa2-85a5-98eecea52d0a.png" width="100%" height="100%"/>
+            <img src="https://user-images.githubusercontent.com/41159837/183143147-cb648a62-4f0c-4fa2-85a5-98eecea52d0a.png" width="50%" height="50%"/>
             
 - why_elastic_search?
     - elastic_search has bunch of useful functions with searching data
     - elastic_search is much lighter than other DB
         
-        <img src="https://user-images.githubusercontent.com/41159837/183143137-83cd72f4-b992-4c5b-bf20-7272b765b5a4.png" width="100%" height="100%"/>
+        <img src="https://user-images.githubusercontent.com/41159837/183143137-83cd72f4-b992-4c5b-bf20-7272b765b5a4.png" width="50%" height="50%"/>
         
 
 ### KIBANA
@@ -187,22 +187,21 @@ Default : 지금까지 올렸던 총 사진 종류, 개수
 - 일라스틱 서치의 각 데이터들을 시각화하며, 해당 데이터들을 관리하는데 도움을 주는 프로그램입니다.
 - 추후. 데이터 관리 및, 데이터 시각화를 통한 보다 좋은 개발환경을 구현하기 위해 사용,
 
-<img src="https://user-images.githubusercontent.com/41159837/183142233-4e4129a6-9ece-4ac5-8f26-b016799938fd.png" width="100%" height="100%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183142233-4e4129a6-9ece-4ac5-8f26-b016799938fd.png" width="50%" height="50%"/>
 
 ## 🪴 **AI**
 
-<img src="https://user-images.githubusercontent.com/41159837/183143436-45b192d7-9393-421e-9c29-197373b8db84.png" width="100%" height="100%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183143436-45b192d7-9393-421e-9c29-197373b8db84.png" width="50%" height="50%"/>
 
-<img src="https://user-images.githubusercontent.com/41159837/183143428-f90abae0-4f7c-44ef-9028-c47a1bd693cc.jpg" width="20%" height="20%"/>
-<img src="https://user-images.githubusercontent.com/41159837/183143432-a5be1cd3-08b8-4a53-97f3-90d344444d0c.jpg" width="20%" height="20%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183143428-f90abae0-4f7c-44ef-9028-c47a1bd693cc.jpg" width="30%" height="30%"/><img src="https://user-images.githubusercontent.com/41159837/183143432-a5be1cd3-08b8-4a53-97f3-90d344444d0c.jpg" width="30%" height="30%"/>
 
-<img src="https://user-images.githubusercontent.com/41159837/183143423-fa6d79a9-ade8-4a86-8f8a-f75a27a24622.png" width="100%" height="100%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183143423-fa6d79a9-ade8-4a86-8f8a-f75a27a24622.png" width="50%" height="50%"/>
 
-<img src="https://user-images.githubusercontent.com/41159837/183143419-334ccefb-c836-4f6a-93f4-24dc2b4af605.png" width="100%" height="100%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183143419-334ccefb-c836-4f6a-93f4-24dc2b4af605.png" width="50%" height="50%"/>
 
-- Result
-    <img src="https://user-images.githubusercontent.com/41159837/183143416-e56783c1-72db-4ced-860f-2119246c98dd.jpeg" width="20%" height="20%"/>
-    <img src="https://user-images.githubusercontent.com/41159837/183143412-6278b796-e52a-411e-b91a-665fbc98bb02.jpg" width="20%" height="20%"/>
+- Result  
+    <img src="https://user-images.githubusercontent.com/41159837/183143416-e56783c1-72db-4ced-860f-2119246c98dd.jpeg" width="30%" height="30%"/>
+    <img src="https://user-images.githubusercontent.com/41159837/183143412-6278b796-e52a-411e-b91a-665fbc98bb02.jpg" width="30%" height="30%"/>
 ## JWT
 
 - used_library
@@ -210,7 +209,7 @@ Default : 지금까지 올렸던 총 사진 종류, 개수
 - JWT_Settings.py
     - set JWT’s default_settings
         
-        <img src="https://user-images.githubusercontent.com/41159837/183143775-f17eea8b-c3d6-48cc-9ba1-c050fc3072fe.png" width="100%" height="100%"/>
+        <img src="https://user-images.githubusercontent.com/41159837/183143775-f17eea8b-c3d6-48cc-9ba1-c050fc3072fe.png" width="50%" height="50%"/>
         
 - JWT on frontEND
     - restore tokens by using redux
@@ -223,20 +222,20 @@ Default : 지금까지 올렸던 총 사진 종류, 개수
 
 ## 💻 Monitoring
 
-<img src="https://user-images.githubusercontent.com/41159837/183143868-35b43d78-a69b-4e3e-a1ba-365234ab67b2.png" width="100%" height="100%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183143868-35b43d78-a69b-4e3e-a1ba-365234ab67b2.png" width="50%" height="50%"/>
 
 ## Prometheus
 
 - exporter가 매트릭을 수집하고 HTTP 통신을 통해 metric data를 가져갈 수 있게 /metrics 라는 HTTP 엔드포인트를 제공한다. 그러면 Prometheus server가 이 exporter의 엔드포인트에 HTTP GET 요청을 이용하여 metric data를 pull 한다.
 - 해당 노드의 metric data
 
-<img src="https://user-images.githubusercontent.com/41159837/183143866-e2bb4650-3098-4f79-8e45-c3eb89ef032b.png" width="100%" height="100%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183143866-e2bb4650-3098-4f79-8e45-c3eb89ef032b.png" width="50%" height="50%"/>
 
 ## Grafana
 
 - Prometheus의 시각화 도구가 부족하여 이를 직접 사용하지는 않고 대게 Grafana라는 Data Visualization tool을 이용하여 시각화하고 있다.
 
-<img src="https://user-images.githubusercontent.com/41159837/183143860-5af55454-9527-4844-822a-99984c363178.png" width="100%" height="100%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183143860-5af55454-9527-4844-822a-99984c363178.png" width="50%" height="50%"/>
 
 CPU load / RAM usage / Memory swap
 
@@ -244,7 +243,7 @@ CPU load / RAM usage / Memory swap
 
 - 생성된 도커 컨테이너등에 대한 데이터를 수집해준다.
 
-<img src="https://user-images.githubusercontent.com/41159837/183143853-66b83ff7-1a9a-4d99-a8cf-4a6930214cdc.png" width="100%" height="100%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183143853-66b83ff7-1a9a-4d99-a8cf-4a6930214cdc.png" width="50%" height="50%"/>
 
 ## **How to Start**
 
