@@ -11,6 +11,7 @@
 
 ## 🌵 **Tech Stack**
 
+|---|---|---|---|---|---|---|
 |DevOps|Frontend|Backend|DB|AI|Monitoring|Others
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=black">
 <img src="https://img.shields.io/badge/Amazon EC2-FF9900?style=for-the-badge&logo=Amazon%20EC2&logoColor=white">
