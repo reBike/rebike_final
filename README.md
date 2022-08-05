@@ -13,7 +13,7 @@
 
 ## 🌸 **Core Screens**
 
-<img src="https://user-images.githubusercontent.com/41159837/183132826-5238c9e3-b067-4cfc-a2b3-bed4c43f6dbd.png" width="100%" height="100%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183132826-5238c9e3-b067-4cfc-a2b3-bed4c43f6dbd.png" width="50%" height="50%"/>
 
 ### **Redux**
 
@@ -53,7 +53,7 @@ reducer
     2. 컴포넌트 재활용을 위해 upload한 이미지 및 내가 버린 쓰레기 상세페이지를 위한 trash_id 전역관리 
     
 
-### Mainpage (gif 넣기)
+### Mainpage
 
 - Search
     
@@ -68,7 +68,7 @@ reducer
     <img src="https://user-images.githubusercontent.com/41159837/183141301-d4fbe806-6044-4c7b-8a9a-1d31ecd3e416.gif" width="50%" height="50%"/>
     
 
-### Signup/Signin
+### Sign up/ Sign in
 
 - Sign Up
     
@@ -84,17 +84,14 @@ reducer
 autosave - On : 올린 사진을 자동 저장 / Off : 저장되지 않음
     <img src="https://user-images.githubusercontent.com/41159837/183141351-b185a97e-97fd-46d7-afb6-94543aa1b802.gif" width="50%" height="50%"/>
     
-- Graph → 올린 사진의 종류와 수 파악 가능
-Default : 지금까지 올렸던 총 사진 종류, 개수
-시작 날짜, 끝 날짜를 지정하여 원하는 날짜에 올린 쓰레기 종류 확인
+- Graph → 올린 사진의 종류와 수 파악 가능    
+Default : 지금까지 올렸던 총 사진 종류, 개수    
+시작 날짜, 끝 날짜를 지정하여 원하는 날짜에 올린 쓰레기 종류 확인    
     <img src="https://user-images.githubusercontent.com/41159837/183141349-7dd721c0-40c3-4751-b0c9-cca96a6cdc62.gif" width="50%" height="50%"/>
     
 - Challenge → 사진을 올렸을 때 활성화/Change Info → 비밀번호, 닉네임 변경/Log Out
-유저들이 직접 시도하면서 찾는 재미
+
     <img src="https://user-images.githubusercontent.com/41159837/183141312-e0b49008-be07-4da6-9114-e3afb336b73a.gif" width="50%" height="50%"/>
-    
-- Change Info → 비밀번호, 닉네임 변경
-    <img src="" width="50%" height="50%"/>
 
 ## 🌿 ERD
 
