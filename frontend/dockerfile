@@ -1,7 +1,8 @@
-FROM node:16.13.0-alpine
+FROM node:16.10.0
+USER root
 
-WORKDIR /app
-
-COPY . /app
+WORKDIR /frontend
+COPY . /frontend
 
 RUN npm install
+RUN npm run build

@@ -3,6 +3,7 @@ version: "3.8"
 volumes:
   mysql_data:
   elasticsearch_volume:
+  frontend:
 
 services:
   mysqldb:
@@ -29,7 +30,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./backend:/app
+      - ./backend:/backend
     depends_on:
       mysqldb:
         condition: service_healthy
@@ -120,17 +121,18 @@ services:
       - 80:80
     volumes:
       - ./nginx/nginx:/etc/nginx
+      - frontend:/var/www/frontend
     depends_on:
       - mysqldb
       - backend
+      - frontend
 
   frontend:
     build: ./frontend
-    command: ["npm", "start"]
-    ports:
-      - 3000:3000
     volumes:
-      - ./frontend:/app
+      - ./frontend//frontend
+      - frontend:/frontend/build
+    tty: true
 
   kibana:
     container_name: kibana

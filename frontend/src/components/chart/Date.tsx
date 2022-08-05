@@ -5,12 +5,14 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import axios from "axios";
+import { getAccess } from "../../Auth/tokenManager";
+import { ReduxModule } from "../../modules/ReduxModule";
+import Api from "../../utils/customApi";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#759F98",
+      main: "#737458",
     },
   },
 });
@@ -21,10 +23,11 @@ function formatDate(date: Date) {
     (date.getMonth() + 1).toString().padStart(2, "0"),
     date.getDate().toString().padStart(2, "0"),
   ].join("-");
-} // 날짜 상태
+} 
 
 function Dates({ onClickRetrieve }: { onClickRetrieve: any }) {
-  // 함수의 반환 : onClickRetrieve
+
+  const userIdtoRedux = ReduxModule().decodeInfo?.id;
 
   const [StartDate, setStartDate] = React.useState<string | null>(null);
   const [StartLock, setStartLock] = React.useState<Date | null>(null);
@@ -45,8 +48,6 @@ function Dates({ onClickRetrieve }: { onClickRetrieve: any }) {
 
   const HandleSubmit = (event: any) => {
     event.preventDefault();
-    console.log(StartDate);
-    console.log(EndDate);
     fetchUserData();
   };
 
@@ -61,22 +62,28 @@ function Dates({ onClickRetrieve }: { onClickRetrieve: any }) {
       }
     }
 
-    axios
-      .get(
-        `http://localhost:8080/trash/mypage/users/2c762f6e-b369-4985-96f9-29ccb4f9fc34/statistics${periodStr}${startDateStr}${endDateStr}`
-      )
-      .then((response) => {
-        // Handle success.
-        const responseUserData = response.data;
-        console.log("data saved!");
-        console.log(response.data);
-        onClickRetrieve(responseUserData);
-      })
-      .catch((error) => {
-        // Handle error.
-        console.log("An error occurred:", error.response);
-      });
-  };
+    const getDate = async () => {
+      const stringAccess: any = getAccess();
+      if (stringAccess !== null) { 
+        await Api
+          .get(
+            `/trash/users/${userIdtoRedux}/statistics${periodStr}${startDateStr}${endDateStr}`, { //patch : 바디 -> 변경할 alias & 헤더 -> 확인해야되는 토큰 
+            headers: {
+              Authorization: `${stringAccess.value}`
+            }
+          })
+          .then((response) => {
+            // Handle success.
+            const responseUserData = response.data;
+            onClickRetrieve(responseUserData);
+          })
+          .catch((error) => {
+            // Handle error.
+          });
+      };
+    }
+    getDate();
+  }
 
   React.useEffect(() => {
     fetchUserData();
@@ -90,7 +97,7 @@ function Dates({ onClickRetrieve }: { onClickRetrieve: any }) {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        sx={{ paddingTop: 2 }}
+        sx={{ paddingTop: 5 }}
         onSubmit={HandleSubmit}
         noValidate
       >
@@ -138,15 +145,19 @@ function Dates({ onClickRetrieve }: { onClickRetrieve: any }) {
                 type="submit"
                 variant="contained"
                 sx={{
+                  "&:hover": {
+                    backgroundColor: "#737458"
+                  },
+                  margin: 2,
+                  width: 80,
                   height: 40,
-                  color: "white",
                   fontWeight: "bold",
-                  fontSize: 18,
-                  marginLeft: 3,
-                  backgroundColor: "#759F98",
+                  fontSize: 12,
+                  color: "white",
+                  backgroundColor: "#B0B09A",
                 }}
               >
-                조회
+                Submit
               </Button>
             </Box>
           </Grid>
