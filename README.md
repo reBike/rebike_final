@@ -4,6 +4,7 @@
 
 ### System Architecture
 <img src = "https://user-images.githubusercontent.com/41159837/183089975-81ea7383-4b59-4bb1-907e-16e8a1af9c01.png" width="100%" height="100%">
+
 ### Core Screen
 1. Mainpage
 이미지 업로드
