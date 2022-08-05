@@ -263,3 +263,7 @@ CPU load / RAM usage / Memory swap
 
 
 # ™️ⁱ **Members of Team-E**
+|이름|개발분야|소개페이지|
+|---|---|---|
+|김용민|Back-end|https://github.com/Ryokuman
+
