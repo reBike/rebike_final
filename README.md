@@ -191,7 +191,7 @@ Default : 지금까지 올렸던 총 사진 종류, 개수
 
 ## 🪴 **AI**
 
-<img src="https://user-images.githubusercontent.com/41159837/183143436-45b192d7-9393-421e-9c29-197373b8db84.png" width="50%" height="50%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183143436-45b192d7-9393-421e-9c29-197373b8db84.png" width="70%" height="70%"/>
 
 <img src="https://user-images.githubusercontent.com/41159837/183143428-f90abae0-4f7c-44ef-9028-c47a1bd693cc.jpg" width="30%" height="30%"/><img src="https://user-images.githubusercontent.com/41159837/183143432-a5be1cd3-08b8-4a53-97f3-90d344444d0c.jpg" width="30%" height="30%"/>
 
