@@ -9,7 +9,7 @@
 
 ## 🪵 **System Architecture**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/15f8c624-684d-4661-b1cb-875dbe6f27d1/Untitled.png)
+<img src="https://user-images.githubusercontent.com/41159837/183132843-212abe8a-5000-4acd-9a17-a8deab497ac2.png" width="100%" height="100%"/>
 
 ## 🌵 **Tech Stack**
 
