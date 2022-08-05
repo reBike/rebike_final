@@ -5,8 +5,6 @@
 > 생활 쓰레기 종류 AI 분석 및 분리수거 생활화를 위한 플랫폼
 > 
 
-→ ai 이미지 인식 구동 움짤 첨부
-
 ## 🪵 **System Architecture**
 
 <img src="https://user-images.githubusercontent.com/41159837/183132843-212abe8a-5000-4acd-9a17-a8deab497ac2.png" width="100%" height="100%"/>
