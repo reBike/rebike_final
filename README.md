@@ -95,7 +95,7 @@ Default : 지금까지 올렸던 총 사진 종류, 개수
 
 ## 🌿 ERD
 
-<img src="https://user-images.githubusercontent.com/41159837/183132832-e911786b-a2b5-4647-baea-c66199e8ac85.png" width="50%" height="50%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183132832-e911786b-a2b5-4647-baea-c66199e8ac85.png" width="70%" height="70%"/>
 
 ### **users api**
 
