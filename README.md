@@ -11,6 +11,8 @@
 
 ## 🌵 **Tech Stack**
 
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=Docker&logoColor=#2496ED">
+
 ## 🌸 **Core Screens**
 
 <img src="https://user-images.githubusercontent.com/41159837/183132826-5238c9e3-b067-4cfc-a2b3-bed4c43f6dbd.png" width="50%" height="50%"/>
