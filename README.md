@@ -15,7 +15,7 @@
 
 ## 🌸 **Core Screens**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5da3e36d-bb84-40a3-a12f-9d70c347369a/Untitled.png)
+<img src="https://user-images.githubusercontent.com/41159837/183132826-5238c9e3-b067-4cfc-a2b3-bed4c43f6dbd.png" width="100%" height="100%"/>
 
 ### **Redux**
 
@@ -57,36 +57,50 @@ reducer
 
 ### Mainpage (gif 넣기)
 
+- Search
+    
+    <img src="https://user-images.githubusercontent.com/41159837/183141339-a913037d-2bad-4d61-89e8-139116a8f34d.gif" width="50%" height="50%"/>
+
 - UploadImage (polling)
     
-    ![업로드이미지.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5011ad02-896a-4901-9a71-b884efabc7a8/%E1%84%8B%E1%85%A5%E1%86%B8%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B5.gif)
+    <img src="https://user-images.githubusercontent.com/41159837/183141344-7c23a598-5be9-40b8-a18e-7b0efc533216.gif" width="50%" height="50%"/>
     
 - PopularTrash
     
-    ![인기쓰레기.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6f43cfc2-efcf-4ae9-b7df-d60e1373de69/%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%80%E1%85%B5%E1%84%8A%E1%85%B3%E1%84%85%E1%85%A6%E1%84%80%E1%85%B5.gif)
+    <img src="https://user-images.githubusercontent.com/41159837/183141301-d4fbe806-6044-4c7b-8a9a-1d31ecd3e416.gif" width="50%" height="50%"/>
     
 
-### Signup/Login
+### Signup/Signin
 
-- Register
+- Sign Up
     
-    ![로그인.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5ae7fe6c-5ecf-456d-a4c1-b587f81ccd34/%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%8B%E1%85%B5%E1%86%AB.gif)
+    <img src="https://user-images.githubusercontent.com/41159837/183135163-ba83f739-d076-45fb-bd74-9cc560f6af85.gif" width="50%" height="50%"/>
     
+- Sign In
+    
+    <img src="https://user-images.githubusercontent.com/41159837/183135150-b8a752ed-df17-4ce0-a4b4-ac115a8c143f.gif" width="50%" height="50%"/>
 
 ### MyPage
 
 - MyTrashcan → 올렸던 사진들을 모두 확인가능
 autosave - On : 올린 사진을 자동 저장 / Off : 저장되지 않음
+    <img src="https://user-images.githubusercontent.com/41159837/183141351-b185a97e-97fd-46d7-afb6-94543aa1b802.gif" width="50%" height="50%"/>
+    
 - Graph → 올린 사진의 종류와 수 파악 가능
 Default : 지금까지 올렸던 총 사진 종류, 개수
 시작 날짜, 끝 날짜를 지정하여 원하는 날짜에 올린 쓰레기 종류 확인
-- Challenge → 사진을 올렸을 때 활성화
+    <img src="https://user-images.githubusercontent.com/41159837/183141349-7dd721c0-40c3-4751-b0c9-cca96a6cdc62.gif" width="50%" height="50%"/>
+    
+- Challenge → 사진을 올렸을 때 활성화/Change Info → 비밀번호, 닉네임 변경/Log Out
 유저들이 직접 시도하면서 찾는 재미
+    <img src="https://user-images.githubusercontent.com/41159837/183141312-e0b49008-be07-4da6-9114-e3afb336b73a.gif" width="50%" height="50%"/>
+    
 - Change Info → 비밀번호, 닉네임 변경
+    <img src="" width="50%" height="50%"/>
 
 ## 🌿 ERD
 
-![스크린샷 2022-08-04 오후 2.06.49.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6f9ab2c3-1ffe-4208-bfee-c7d33ba37734/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.06.49.png)
+<img src="https://user-images.githubusercontent.com/41159837/183132832-e911786b-a2b5-4647-baea-c66199e8ac85.png" width="100%" height="100%"/>
 
 ### **users api**
 
@@ -126,7 +140,7 @@ Default : 지금까지 올렸던 총 사진 종류, 개수
 
 ### Elastic_search
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/345a6a7f-500e-4fae-aad5-b9c5904fe83c/Untitled.png)
+<img src="https://user-images.githubusercontent.com/41159837/183142243-d5d8a26c-e3b7-4e06-83be-96b45f6d535b.png" width="100%" height="100%"/>
 
 - used_library
     - `elasticsearch`
@@ -135,42 +149,42 @@ Default : 지금까지 올렸던 총 사진 종류, 개수
     - elastic_search default data setter
         1. make connection with `django_elasticsearch_dsl`
             
-            ![스크린샷 2022-08-04 오후 3.26.59.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/711b5e50-f665-4f10-b94b-29fed8e42289/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.26.59.png)
+            <img src="https://user-images.githubusercontent.com/41159837/183142917-54026b58-761b-42a9-9063-b68f0042b2f8.png" width="100%" height="100%"/>
             
         2. make default data by using `search_cofig.json` 
             
-            ![스크린샷 2022-08-04 오후 3.27.30.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5e595271-368c-446b-b866-7ad1a345d2b7/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.27.30.png)
+            <img src="https://user-images.githubusercontent.com/41159837/183142923-932df86b-f5d8-413c-bc2e-6debd3871d0f.png" width="100%" height="100%"/>
             
-            ![스크린샷 2022-08-04 오후 3.28.19.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/101f0ac1-4438-4f95-988c-027114af4029/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.28.19.png)
+            <img src="https://user-images.githubusercontent.com/41159837/183142925-04062de1-2392-46f7-833b-57d7e80177bc.png" width="100%" height="100%"/>
             
         3. bulk default data on elastic_search
             
-            ![스크린샷 2022-08-04 오후 3.28.40.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0b6ee636-3a3f-4328-8b26-cc5d1d961a22/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.28.40.png)
+            <img src="https://user-images.githubusercontent.com/41159837/183142927-8c397975-1d18-471e-abd5-6e52f6567bf7.png" width="100%" height="100%"/>
             
 - elastic_search on Search api
     - get  search_value from query_param
         
-        ![스크린샷 2022-08-04 오후 3.29.34.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/58b20484-862a-4158-9c73-13e11640af2a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.29.34.png)
+        <img src="https://user-images.githubusercontent.com/41159837/183143129-e310f3db-c82d-43fa-852b-38f8487959b2.png" width="100%" height="100%"/>
         
     - make connection with elastic_search by using `django_elasticsearch_dsl`
         
-        ![스크린샷 2022-08-04 오후 3.30.35.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a08266b0-8ed0-4a69-b6c8-ae7cfbdfea8e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.30.35.png)
+        <img src="https://user-images.githubusercontent.com/41159837/183143135-e499a402-28a3-4b29-a4ab-ae87c2bf8f66.png" width="100%" height="100%"/>
         
     - get data which contained key that has correlation with search_value
     - example
         1. send request
             
-            ![스크린샷 2022-08-04 오후 4.30.58.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c5b5b496-3fd8-4379-9f9b-9062a1b788cf/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.30.58.png)
+            <img src="https://user-images.githubusercontent.com/41159837/183143143-d43d270f-3b6b-4735-96fc-22ac08e445cb.png" width="100%" height="100%"/>
             
         2. output
             
-            ![스크린샷 2022-08-04 오후 4.31.28.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/22d5823c-7c81-4825-999c-5872cd7683c1/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.31.28.png)
+            <img src="https://user-images.githubusercontent.com/41159837/183143147-cb648a62-4f0c-4fa2-85a5-98eecea52d0a.png" width="100%" height="100%"/>
             
 - why_elastic_search?
     - elastic_search has bunch of useful functions with searching data
     - elastic_search is much lighter than other DB
         
-        ![스크린샷 2022-08-04 오후 3.44.22.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/debdadeb-8cdd-486f-af0b-c9a45d4a3cd5/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.44.22.png)
+        <img src="https://user-images.githubusercontent.com/41159837/183143137-83cd72f4-b992-4c5b-bf20-7272b765b5a4.png" width="100%" height="100%"/>
         
 
 ### KIBANA
@@ -178,20 +192,22 @@ Default : 지금까지 올렸던 총 사진 종류, 개수
 - 일라스틱 서치의 각 데이터들을 시각화하며, 해당 데이터들을 관리하는데 도움을 주는 프로그램입니다.
 - 추후. 데이터 관리 및, 데이터 시각화를 통한 보다 좋은 개발환경을 구현하기 위해 사용,
 
-![스크린샷 2022-08-04 오후 2.19.50.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6f7e567c-4025-453c-b138-26ee73d28524/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.19.50.png)
+<img src="https://user-images.githubusercontent.com/41159837/183142233-4e4129a6-9ece-4ac5-8f26-b016799938fd.png" width="100%" height="100%"/>
 
 ## 🪴 **AI**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8db2b0b-5f53-49da-a26c-7bc13b443ddb/Untitled.png)
+<img src="https://user-images.githubusercontent.com/41159837/183143436-45b192d7-9393-421e-9c29-197373b8db84.png" width="100%" height="100%"/>
 
-![train_batch0.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c7df8204-e32f-4596-bc61-c490e1f5c522/train_batch0.jpg)
+<img src="https://user-images.githubusercontent.com/41159837/183143428-f90abae0-4f7c-44ef-9028-c47a1bd693cc.jpg" width="20%" height="20%"/>
+<img src="https://user-images.githubusercontent.com/41159837/183143432-a5be1cd3-08b8-4a53-97f3-90d344444d0c.jpg" width="20%" height="20%"/>
 
-![train_batch2.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/22331509-982c-4ed4-97ff-7b1a423abceb/train_batch2.jpg)
+<img src="https://user-images.githubusercontent.com/41159837/183143423-fa6d79a9-ade8-4a86-8f8a-f75a27a24622.png" width="100%" height="100%"/>
 
-![results.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b7aeeb1-1ae7-4851-8d25-85924f042e75/results.png)
+<img src="https://user-images.githubusercontent.com/41159837/183143419-334ccefb-c836-4f6a-93f4-24dc2b4af605.png" width="100%" height="100%"/>
 
-![P_curve.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bf03523e-a0b9-41ae-a252-900b49fe7129/P_curve.png)
-
+- Result
+    <img src="https://user-images.githubusercontent.com/41159837/183143416-e56783c1-72db-4ced-860f-2119246c98dd.jpeg" width="20%" height="20%"/>
+    <img src="https://user-images.githubusercontent.com/41159837/183143412-6278b796-e52a-411e-b91a-665fbc98bb02.jpg" width="20%" height="20%"/>
 ## JWT
 
 - used_library
@@ -199,32 +215,33 @@ Default : 지금까지 올렸던 총 사진 종류, 개수
 - JWT_Settings.py
     - set JWT’s default_settings
         
-        ![스크린샷 2022-08-04 오후 3.51.12.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f740b00e-0f78-439b-bfba-de15bc7b47f1/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.51.12.png)
+        <img src="https://user-images.githubusercontent.com/41159837/183143775-f17eea8b-c3d6-48cc-9ba1-c050fc3072fe.png" width="100%" height="100%"/>
         
 - JWT on frontEND
     - restore tokens by using redux
     - if we need some user data, we don’t need to make connection with backend
     by opening JWT payload, we can get user data
+    
 - JWT on backEND
     - after we identify user by check login data, give authorization by using JWT
     - by using refresh_token, we enhanced our security level
 
 ## 💻 Monitoring
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dba112d2-d844-4e25-83f6-3c14127debb6/Untitled.png)
+<img src="https://user-images.githubusercontent.com/41159837/183143868-35b43d78-a69b-4e3e-a1ba-365234ab67b2.png" width="100%" height="100%"/>
 
 ## Prometheus
 
 - exporter가 매트릭을 수집하고 HTTP 통신을 통해 metric data를 가져갈 수 있게 /metrics 라는 HTTP 엔드포인트를 제공한다. 그러면 Prometheus server가 이 exporter의 엔드포인트에 HTTP GET 요청을 이용하여 metric data를 pull 한다.
 - 해당 노드의 metric data
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/60d4b652-1c46-4f25-9575-44b3a48cf5c0/Untitled.png)
+<img src="https://user-images.githubusercontent.com/41159837/183143866-e2bb4650-3098-4f79-8e45-c3eb89ef032b.png" width="100%" height="100%"/>
 
 ## Grafana
 
 - Prometheus의 시각화 도구가 부족하여 이를 직접 사용하지는 않고 대게 Grafana라는 Data Visualization tool을 이용하여 시각화하고 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2e812724-95c4-4e18-b9b9-57802e8bcd5a/Untitled.png)
+<img src="https://user-images.githubusercontent.com/41159837/183143860-5af55454-9527-4844-822a-99984c363178.png" width="100%" height="100%"/>
 
 CPU load / RAM usage / Memory swap
 
@@ -232,14 +249,14 @@ CPU load / RAM usage / Memory swap
 
 - 생성된 도커 컨테이너등에 대한 데이터를 수집해준다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8c2a04aa-687d-4d67-9815-025e8229dc4b/Untitled.png)
+<img src="https://user-images.githubusercontent.com/41159837/183143853-66b83ff7-1a9a-4d99-a8cf-4a6930214cdc.png" width="100%" height="100%"/>
 
 ## **How to Start**
 
-백앤드 프론트 합치고…
+
 
 ## **Project Tree**
 
-프로젝트 폴더 구조
+
 
 # ™️ⁱ **Members of Team-E**
