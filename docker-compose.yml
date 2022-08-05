@@ -3,7 +3,7 @@ version: "3.8"
 volumes:
   mysql_data:
   elasticsearch_volume:
-  frontend:
+  build_file:
 
 services:
   mysqldb:
@@ -121,7 +121,7 @@ services:
       - 80:80
     volumes:
       - ./nginx/nginx:/etc/nginx
-      - frontend:/var/www/frontend
+      - build_file:/var/www/frontend
     depends_on:
       - mysqldb
       - backend
@@ -130,8 +130,7 @@ services:
   frontend:
     build: ./frontend
     volumes:
-      - ./frontend//frontend
-      - frontend:/frontend/build
+      - build_file:/frontend/build
     tty: true
 
   kibana:
