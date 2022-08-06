@@ -1,29 +1,14 @@
 version: "3.8"
 
 volumes:
-  mysql_data:
   elasticsearch_volume:
   build_file:
 
 services:
-  mysqldb:
-    build: ./db
-    env_file:
-      - "./db/db.env"
-    ports:
-      - "8989:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
-    healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
-      timeout: 20s
-      retries: 10
-
   backend:
     build: ./backend
     command: >
-      bash -c "python wait_mysql.py &&
-               python setup_es.py &&
+      bash -c "python setup_es.py &&
                python manage.py makemigrations &&
                python manage.py migrate &&
                python manage.py runserver 0.0.0.0:8080"
@@ -32,8 +17,6 @@ services:
     volumes:
       - ./backend:/backend
     depends_on:
-      mysqldb:
-        condition: service_healthy
       elasticsearch:
         condition: service_healthy
 
@@ -123,7 +106,6 @@ services:
       - ./nginx/nginx:/etc/nginx
       - build_file:/var/www/frontend
     depends_on:
-      - mysqldb
       - backend
       - frontend
 

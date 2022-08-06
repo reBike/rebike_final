@@ -100,6 +100,6 @@ const contents = {
 
 export default contents;
 
-export const DOMAIN = "localhost";
+export const DOMAIN = "15.164.232.8";
 
 export const API_BASE_URL = `http://${DOMAIN}:8080/api`;

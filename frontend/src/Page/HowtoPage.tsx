@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Grid, Typography, Link, Modal, Backdrop } from "@mui/material";
+import { Box, Grid, Typography, Link, Modal, Backdrop, Button } from "@mui/material";
 import SearchBar from "../components/mainpage/SearchBar";
 import ExplanationTrash from "../components/howtopage/ExplanationTrash";
 import { ReduxModule } from "../modules/ReduxModule";
@@ -9,6 +9,7 @@ import ReduxImgApi from "../modules/ReduxImgApi";
 import { useLocation } from "react-router";
 import constants from "../utils/constants";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface TypeChallenge {
   state: {
@@ -35,6 +36,8 @@ const style = {
 const HowtoPage = () => {
   const itemID = useSelector((state: RootReducerType) => state.ImgIDReducer);
   const userIdToRedux = ReduxModule().decodeInfo?.id;
+
+  let navigate = useNavigate();
 
   const reduxKindAndImg = ReduxImgApi(itemID, userIdToRedux);
   console.log(userIdToRedux);
@@ -124,8 +127,8 @@ const HowtoPage = () => {
             />
           ))}
 
-          <Link
-            href="/mypage"
+          {/* <Button
+            onClick={()=>{}}
             style={{
               textDecoration: "none",
               fontWeight: "bold",
@@ -137,7 +140,7 @@ const HowtoPage = () => {
           >
             {" "}
             Go To Mypage{" 👉"}{" "}
-          </Link>
+          </Button> */}
 
           {/* //❌ */}
           <Modal

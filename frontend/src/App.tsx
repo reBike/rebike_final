@@ -26,7 +26,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<StartPage />} />
+          <Route path="/" element={<MainPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/login/welcome" element={<LoginSuccess />} />
           <Route path="/register" element={<Register />} />

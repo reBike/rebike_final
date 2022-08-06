@@ -4,7 +4,7 @@ from pathlib import Path
 import os
 import environ
 
-is_dev = True
+is_dev = False
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -74,7 +74,7 @@ MIDDLEWARE = [
 
 ]
 
-CORS_ORIGIN_WHITELIST = ['http://127.0.0.1', 'http://localhost']
+CORS_ORIGIN_WHITELIST = ['http://127.0.0.1', 'http://localhost' , 'http://15.164.232.8' , 'http://rebike.site']
 CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'backend.urls'
