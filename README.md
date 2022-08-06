@@ -267,7 +267,7 @@ CPU load / RAM usage / Memory swap
 |---|---|---|
 |🦥김용민|Back-end,DevOps|https://github.com/Ryokuman
 |💛김유림|Back-end,DevOps,AI|https://github.com/Ellie010707
-|🥇박성빈|Back-end,DevOps|https://github.com/SeongbinPark
+|🏆박성빈|Back-end,DevOps|https://github.com/SeongbinPark
 |🧚🏻‍♀️이채현|Front-end|https://github.com/chloe1129
 |🎹이정우|Front-end|https://github.com/RayLee-Kor
 |👼진호병|Front-end|https://github.com/bicco2
