@@ -89,8 +89,8 @@ reducer
 
 ### MyPage
 
-- MyTrashcan → 올렸던 사진들을 모두 확인가능
-autosave - On : 올린 사진을 자동 저장 / Off : 저장되지 않음
+- MyTrashcan → 올렸던 사진들을 모두 확인가능 <br>
+autosave - On : 올린 사진을 자동 저장 / Off : 저장되지 않음 <br>
     <img src="https://user-images.githubusercontent.com/41159837/183141351-b185a97e-97fd-46d7-afb6-94543aa1b802.gif" width="50%" height="50%"/>
     
 - Graph → 올린 사진의 종류와 수 파악 가능    
